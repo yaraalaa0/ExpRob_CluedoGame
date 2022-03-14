@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	
+    <node name="motion_controller" pkg="cluedo" type="motion_controller.py" output="screen"  />
+    <node name="oracle" pkg="cluedo" type="oracle.py" output="screen"  />
+    <node name="map" pkg="cluedo" type="map.py" output="screen"  />
+    <node name="state_machine" pkg="cluedo" type="state_machine.py" output="screen"  />
+</launch>
