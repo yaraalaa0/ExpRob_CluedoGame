@@ -3,11 +3,9 @@ ROS implementation of an agent playing simplified Cluedo Game with the help of O
 
 ```
 rosrun armor execute it.emarolab.armor.ARMORMainService
-
 ```
 
 
 ```
 roslaunch cluedo cluedo.launch
-
 ```
