@@ -9,7 +9,7 @@ Add the path of the armor modules to your Python path:
 
 `export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/ `
 
-download this repository to your workspace. Then, build
+Download this repository to your workspace. Then, build it
 
 `catkin_make`
 
