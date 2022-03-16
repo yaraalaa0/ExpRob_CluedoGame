@@ -5,7 +5,10 @@ ROS implementation of an agent playing simplified Cluedo Game with the help of O
 
 To run the program, you need first to install [ARMOR](https://github.com/EmaroLab/armor) in your ROS workspace.
 
-Then, you need to adapt the code in armor_py_api scripts to be in Python3 instead of Python2 (slight changes)
+Then, you need to adapt the code in armor_py_api scripts to be in Python3 instead of Python2:
+  - add "from armor_api.armor_exceptions import ArmorServiceInternalError, ArmorServiceCallError" in armor_client.py
+  - replace all "except rospy.ServiceException, e" with "except rospy.ServiceException as e"
+  - modify line 132 of armor_query_client with: "if res.success and len(res.queried_objects) > 1:"
 
 Add the path of the armor modules to your Python path:
 
