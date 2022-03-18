@@ -22,7 +22,7 @@ This is a ROS implementation of an agent playing simplified Cluedo Game with the
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.PNG?raw=true)
 
-##Installation and Running Procedures:
+## Installation and Running Procedures:
 
 To run the program, you need first to install [ARMOR](https://github.com/EmaroLab/armor) in your ROS workspace.
 
@@ -46,4 +46,8 @@ To launch the program, run the following commands on different terminal tabs:
 `rosrun armor execute it.emarolab.armor.ARMORMainService`
 
 `roslaunch cluedo cluedo.launch`
+
+To display the states:
+
+`rosrun smach ...`
 
