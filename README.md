@@ -3,15 +3,15 @@ ROS implementation of an agent playing simplified Cluedo Game with the help of O
 
 [yara.ala96@gmail.com](mailto:yara.ala96@gmail.com)
 
-Component Diagram:
+## Component Diagram:
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp_diag2.PNG?raw=true)
 
-State Diagram:
+## State Diagram:
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
 
-Sequence Diagram:
+## Sequence Diagram:
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.PNG?raw=true)
 
