@@ -4,11 +4,11 @@ ROS implementation of an agent playing simplified Cluedo Game with the help of O
 [yara.ala96@gmail.com](mailto:yara.ala96@gmail.com)
 
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp_diag2.jpg?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp_diag2.PNG?raw=true)
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.jpg?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.jpg?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.PNG?raw=true)
 
 To run the program, you need first to install [ARMOR](https://github.com/EmaroLab/armor) in your ROS workspace.
 
