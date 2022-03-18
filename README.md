@@ -1,7 +1,10 @@
 # ExpRob_CluedoGame
 ROS implementation of an agent playing simplified Cluedo Game with the help of OWL ontology and SMACH
 
-[yara.ala96@gmail.com](mailto:yara.ala96@gmail.com)
+|            Name            | Student ID |      Email Address       |
+| :------------------------: | :--------: | :----------------------: |
+|     Yara Abdelmottaleb     |  5066359   |  [yara.ala96@gmail.com](mailto:yara.ala96@gmail.com)   |
+
 
 ## Component Diagram:
 
