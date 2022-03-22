@@ -8,18 +8,18 @@ This is a ROS implementation of a robot agent playing simplified Cluedo Game wit
 
 ## Introduction:
 
-This is a ROS implementation of an agent playing a simplified Cluedo Game. The agent goes to random rooms and collects hints in the form of (who, PERSON), (where, PLACE) and (what, WEAPON). When the agent's current working hypothesis is COMPLETE (that means it contains all three types of hints), it goes to a place called the Oracle where the hypothesis is checked. The agent continues to explore the environment, collect hints, and check hypothesis until it finds the correct hypothesis.
+This is a ROS implementation of an agent playing a simplified Cluedo Game. The agent goes to random rooms and collects hints in the form of *(who, PERSON)*, *(where, PLACE)* and *(what, WEAPON)*. When the agent's current working hypothesis is `COMPLETE` (that means it contains all three types of hints), it goes to a place called the Oracle where the hypothesis is checked. The agent continues to explore the environment, collect hints, and check hypothesis until it finds the correct hypothesis.
 
 ## Component Diagram:
 
 The software architecture of the system is composed of six main components: 
 
-- **The knowledge base (ontology)**: this is the OWL ontology representing the current knowledge of the robot agent. In the beginning it contains the class definitions of HYPOTHESIS, COMPLETE, INCONSISTENT, PERSON, PLACE, and WEAPON, as well as the object properties definitions of (who, PERSON), (where, PLACE), and (what, WEAPON). As the robot explores the environment, new individuals and proberties assertions are added to the ontology.
+- **The knowledge base (ontology)**: this is the OWL ontology representing the current knowledge of the robot agent. In the beginning it contains the class definitions of `HYPOTHESIS`, `COMPLETE`, `INCONSISTENT`, `PERSON`, `PLACE`, and `WEAPON`, as well as the object properties definitions of *(who, PERSON)*, *(where, PLACE)*, and *(what, WEAPON)*. As the robot explores the environment, new individuals and proberties assertions are added to the ontology.
 - **ARMOR**: the armor service responsible for connection with the knowledge base for querying the ontology or manipulating it. It is fully implemented by [EmaroLab](https://github.com/EmaroLab/armor). In this project, it is mainly used by the state machine for adding new hypotheses and hints, and querying the individuals of COMPLETE hypothesis class.
-- **State Machine**: this is the state manager of the robot. It is responsible for controlling the transitions between different robot states (GoToRandomRoom, LookForHints, GoToOracle, and CheckHypothesis). It also implements the robot behaviour in each state. It communicates with the other servers through different ROS messages. The ROS messages and parameters are indicated in the component diagram.
-- **Map Server**: this is the component holding the (x, y) poistion of all rooms in the map. The service request is composed of a flag (bool randFlag) indicating whether the server should return a random room position (randFlag = True) or the oracle postion (randFlag = False)
-- **Motion Controller**: this is the action server responsible for driving the robot towards a target (x,y) position. For now, it is implemented as a simple waiting function for 5 seconds and it always returns True. 
-- **Oracle**: this is the component holding the dictionary of possible hypothesis IDs along with their hints. Each hypothesis ID has 4 hints: one is the empty hint, and the others are (who, PERSON), (what, WEAPON), and (where, PLACE). Whenever the oracle receives a request for the service (/hint) with a specific ID, it returns back a random hint corresponding to this ID. If a hint is sent once, it is deleted from the dictionary in order not to be sent again. This component also holds the correct hypothesis ID. Whenever it receives a request for the service (/check_hyp) with a specific ID, it returns back whether this is the correct hypothesis ID or not.
+- **State Machine**: this is the state manager of the robot. It is responsible for controlling the transitions between different robot states (*GoToRandomRoom*, *LookForHints*, *GoToOracle*, and *CheckHypothesis*). It also implements the robot behaviour in each state. It communicates with the other servers through different ROS messages. The ROS messages and parameters are indicated in the component diagram.
+- **Map Server**: this is the component holding the *(x, y)* poistion of all rooms in the map. The service request is composed of a flag `bool randFlag` indicating whether the server should return a random room position `randFlag = True` or the oracle postion `randFlag = False`
+- **Motion Controller**: this is the action server responsible for driving the robot towards a target *(x,y)* position. For now, it is implemented as a simple waiting function for 5 seconds and it always returns True. 
+- **Oracle**: this is the component holding the dictionary of possible hypothesis IDs along with their hints. Each hypothesis ID has 4 hints: one is the empty hint, and the others are *(who, PERSON)*, *(what, WEAPON)*, and *(where, PLACE)*. Whenever the oracle receives a request for the service `/hint` with a specific ID, it returns back a random hint corresponding to this ID. If a hint is sent once, it is deleted from the dictionary in order not to be sent again. This component also holds the correct hypothesis ID. Whenever it receives a request for the service `/check_hyp` with a specific ID, it returns back whether this is the correct hypothesis ID or not.
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp.PNG?raw=true)
 
@@ -43,13 +43,13 @@ There are, also, four possible events (state transitions):
 ## Sequence Diagram:
 The temporal sequence of the program goes as follows:
 
-1. The state machine requests a random room from the map server, and receives the (x,y) position
+1. The state machine requests a random room from the map server, and receives the *(x,y)* position
 2. it sends the room coordinates to the motion controller and waits until the robot reaches the target
 3. it sends the current hypothesis ID to the oracle and receives a random hint
 4. it adds the hint to the ontology
-5. it checks if the current hypothesis is complete or not (by querying the members of the COMPLETE class in the ontology)
+5. it checks if the current hypothesis is complete or not (by querying the members of the `COMPLETE` class in the ontology)
 6. if the current hypothesis is not complete yet, go to step 1
-7. if the current hypothesis is complete, the state machine requests the (x,y) position of the oracle from the map server
+7. if the current hypothesis is complete, the state machine requests the *(x,y)* position of the oracle from the map server
 8. it sends the oracle coordinates to the motion controller and waits until the robot reaches the target
 9. it sends the current hypothesis ID to the oracle to check if it is correct or not
 10. if the sent hypothesis ID is not correct, generate a new random integer (not previously selected) from 1 to 10 to be the current hypothesis ID and go to step 1.
