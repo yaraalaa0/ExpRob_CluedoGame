@@ -54,9 +54,9 @@ Then, you need to adapt the code in armor_py_api scripts to be in Python3 instea
   - modify line 132 of armor_query_client with: "if res.success and len(res.queried_objects) > 1:"
 
 Add the path of the armor modules to your Python path:
-
-`export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/ `
-
+```
+export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/
+```
 Download this repository to your workspace. Then, build it
 
 ```
