@@ -94,3 +94,8 @@ To display the states:
 ```
 rosrun smach_viewer smach_viewer.py
 ```
+
+## Final Result:
+Following are screenshots of the terminal logs in successive timesteps while running the program:
+
+1. 
