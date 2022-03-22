@@ -41,6 +41,18 @@ There are, also, four possible events (state transitions):
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
 
 ## Sequence Diagram:
+The temporal sequence of the program goes as follows:
+1- The state machine requests a random room from the map server, and receives the (x,y) position
+2- it sends the room coordinates to the motion controller and waits until the robot reaches the target
+3- it sends the current hypothesis ID to the oracle and receives a random hint
+4- it adds the hint to the ontology
+5- it checks if the current hypothesis is complete or not (by querying the members of the COMPLETE class in the ontology)
+6- if the current hypothesis is not complete yet, go to step 1
+7- if the current hypothesis is complete, the state machine requests the (x,y) position of the oracle from the map server
+8- it sends the oracle coordinates to the motion controller and waits until the robot reaches the target
+9- it sends the current hypothesis ID to the oracle to check if it is correct or not
+10- if the sent hypothesis ID is not correct, generate a new random integer (not previously selected) from 1 to 10 to be the current hypothesis ID and go to step 1.
+11- if the sent hypothesis ID is correct, end the program.
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.PNG?raw=true)
 
@@ -76,6 +88,6 @@ rosrun armor execute it.emarolab.armor.ARMORMainService
 roslaunch cluedo cluedo.launch`
 ```
 To display the states:
-
-`rosrun smach ...`
-
+```
+rosrun smach_viewer smach_viewer.py
+```
