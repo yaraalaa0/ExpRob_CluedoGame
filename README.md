@@ -1,7 +1,7 @@
 # ExpRob_CluedoGame
 This is a ROS implementation of a robot agent playing simplified Cluedo Game with knowledge representation in OWL ontology
 
-|        Name                | Student ID |      Email Address       |
+|       Author Name          | Student ID |      Email Address       |
 | :------------------------: | :--------: | :----------------------: |
 |     Yara Abdelmottaleb     |  5066359   |  [yara.ala96@gmail.com](mailto:yara.ala96@gmail.com)   |
 
