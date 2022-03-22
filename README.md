@@ -17,7 +17,7 @@ The software architecture of the system is composed of six main components:
 - The knowledge base (ontology): this is the OWL ontology representing the current knowledge of the robot agent. In the beginning it contains the class definitions of HYPOTHESIS, COMPLETE, INCONSISTENT, PERSON, PLACE, and WEAPON, as well as the object properties definitions of (who, PERSON), (where, PLACE), and (what, WEAPON). As the robot explores the environment, new individuals and proberties assertions are added to the ontology.
 - ARMOR Client: the armor service responsible for connection with the knowledge base for querying existing ontology or manipulating it. It is already implemented by [EmaroLab](https://github.com/EmaroLab/armor). 
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp_diag2.PNG?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp_diag_.PNG?raw=true)
 
 ## State Diagram:
 
