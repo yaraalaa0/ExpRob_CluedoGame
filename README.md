@@ -18,13 +18,25 @@ The software architecture of the system is composed of six main components:
 - ARMOR: the armor service responsible for connection with the knowledge base for querying the ontology or manipulating it. It is fully implemented by [EmaroLab](https://github.com/EmaroLab/armor). 
 - State Machine: this is the state manager of the robot. It is responsible for controlling the transitions between different robot states (GoToRandomRoom, LookForHints, GoToOracle, and CheckHypothesis). It also implements the robot behaviour in each state. It communicates with the other servers through different ROS messages. The ROS messages and parameters are indicated in the component diagram.
 - Map Server: this is the component holding the (x, y) poistion of all rooms in the map. The service request is composed of a flag (bool randFlag) indicating whether the server should return a random room position (randFlag = True) or the oracle postion (randFlag = False)
-- Motion Controller: this is the action server responsible for dricing the robot towards a target (x,y) position. For now, it is implemented as a simple waiting function for 5 seconds. 
+- Motion Controller: this is the action server responsible for driving the robot towards a target (x,y) position. For now, it is implemented as a simple waiting function for 5 seconds and it always returns True. 
 - Oracle: this is the component holding the dictionary of possible hypothesis IDs along with their hints. Each hypothesis ID has 4 hints: one is the empty hint, and the others are (who, PERSON), (what, WEAPON), and (where, PLACE). Whenever the oracle receives a request for the service (/hint) with a specific ID, it returns back a random hint corresponding to this ID. If a hint is sent once, it is deleted from the dictionary in order not to be sent again. This component also holds the correct hypothesis ID. Whenever it receives a request for the service (/check_hyp) with a specific ID, it returns back whether this is the correct hypothesis ID or not.
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp.PNG?raw=true)
 
 ## State Diagram:
 
+The agent has four possible states:
+    - GoToRandomRoom: the robot is going to a random room for exploration
+    - LookForHints: the robot is looking for hints in the place it is currently in
+    - GoToOracle: the robot is going to the oracle place
+    - CheckHypothesis: the robot is checking whether its current collected hypothesis is true or not
+
+There are, also, four possible events (state transitions):
+    - reached: indicating an event that the robot reached its target position
+    - hyp_non_comp: indicating an event that the robot checked the current hypothesis and found that it is not complete yet
+    - hyp_comp: indicating an event that the robot checked the current hypothesis and found that it is complete
+    - hyp_false: indicating that the robot checked in the oracle the current hypothesis and found that it is false.
+ 
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
 
