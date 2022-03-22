@@ -1,5 +1,5 @@
 # ExpRob_CluedoGame
-This is a ROS implementation of a robot agent playing simplified Cluedo Game with knowledge representation in OWL ontology
+This is a ROS implementation of a robot agent playing a simplified Cluedo Game with its knowledge representation in OWL ontology
 
 |       Author Name          | Student ID |      Email Address       |
 | :------------------------: | :--------: | :----------------------: |
