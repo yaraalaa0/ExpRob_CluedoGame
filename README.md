@@ -61,6 +61,8 @@ Download this repository to your workspace. Then, build it
 
 `catkin_make`
 
+Place cluedo_ontology.owl file on your desktop (or on any other place, but you need to specify the path inside [state_machine.py](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo/scripts/state_machine.py))
+
 To launch the program, run the following commands on different terminal tabs:
 
 `roscore`
