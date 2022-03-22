@@ -88,6 +88,8 @@ rosrun armor execute it.emarolab.armor.ARMORMainService
 ```
 roslaunch cluedo cluedo.launch`
 ```
+The robot behaviour is continuously logged on the third terminal.
+
 To display the states:
 ```
 rosrun smach_viewer smach_viewer.py
