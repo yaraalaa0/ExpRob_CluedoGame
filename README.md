@@ -35,7 +35,7 @@ There are, also, four possible events (state transitions):
 - **reached:** indicating an event that the robot reached its target position
 - **hyp_non_comp:** indicating an event that the robot checked the current hypothesis and found that it is not complete yet
 - **hyp_comp:** indicating an event that the robot checked the current hypothesis and found that it is complete
-- **hyp_false:** indicating that the robot checked in the oracle the current hypothesis and found that it is false.
+- **false:** indicating that the oracle checked the current hypothesis and found that it is false.
  
 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
