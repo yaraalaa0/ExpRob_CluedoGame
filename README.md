@@ -96,7 +96,7 @@ rosrun smach_viewer smach_viewer.py
 ```
 
 ## Result:
-Following are screenshots of the terminal logs in successive timesteps while running the program:
+**Following are screenshots of the terminal logs in successive timesteps while running the program:**
 
 1. The program selects a hypothesis ID and starts with the state GoToRandomRoom. After reaching, transition to LookForHints
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st1.PNG?raw=true)
@@ -121,3 +121,10 @@ Following are screenshots of the terminal logs in successive timesteps while run
 
 8. The agent repeates the above steps until the result of checking the hypothesis is CORRECT. In that case, the current ontology is saved and the user is asked to terminate the program.
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st8.PNG?raw=true)
+
+## Working Hypothesis:
+- 
+## System Limitations:
+-
+## Possible Improvements:
+-
