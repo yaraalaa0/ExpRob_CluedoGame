@@ -1,5 +1,7 @@
 # ExpRob_CluedoGame
-This is a ROS implementation of a robot agent playing a simplified Cluedo Game with its knowledge represented in OWL ontology. The system was implemented and tested on this [docker image](https://hub.docker.com/repository/docker/carms84/exproblab) provided by Prof. Carmine Recchiuto
+This is a ROS implementation of a robot agent playing a simplified Cluedo Game with its knowledge represented in OWL ontology. 
+
+The system was implemented and tested on this [docker image](https://hub.docker.com/repository/docker/carms84/exproblab) provided by Prof. Carmine Recchiuto
 
 |       Author Name          | Student ID |      Email Address       |
 | :------------------------: | :--------: | :----------------------: |
