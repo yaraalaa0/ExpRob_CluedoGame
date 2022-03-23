@@ -98,19 +98,26 @@ rosrun smach_viewer smach_viewer.py
 ## Result:
 Following are screenshots of the terminal logs in successive timesteps while running the program:
 
-1. 
+1. The program selects a hypothesis ID and starts with the state GoToRandomRoom. After reaching, transition to LookForHints
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st1.PNG?raw=true)
 
+2. The hint is displayed. The current hypothesis is checked if it is complete or not. It is not complete yet. So, the agent transition to GoToRandomRoom 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st2.PNG?raw=true)
 
+3. The agent goes to a random room and look for hints as before. The hint is displayed and the current hypothesis is checked if it is complete or not. It is not complete yet. So, the agent transition to GoToRandomRoom 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st3.PNG?raw=true)
 
+4. The agent goes to a random room and look for hints as before. Here, the agent doesn't get any hint from this room. The current hypothesis is checked as before. It is not complete yet. So, the agent transition to GoToRandomRoom 
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st4.PNG?raw=true)
 
+5. The agent goes to a random room and look for hints. The hint is displayed and the current hypothesis is checked if it is complete or not. Now, it is complete. So, the agent transition to GoToOracle state.
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st5.PNG?raw=true)
 
+6. The agent goes to the oracle. After reaching, transition to CheckHypothesis
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st6.PNG?raw=true)
 
+7. The hypothesis is displayed. The result of checking is FALSE. So, new hypothesis ID is selected, and the agent transition to GoToRandomRoom as before.
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st7.PNG?raw=true)
 
+8. The agent repeates the above steps until the result of checking the hypothesis is CORRECT. In that case, the current ontology is saved and the user is asked to terminate the program.
 ![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st8.PNG?raw=true)
