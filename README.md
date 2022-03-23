@@ -95,7 +95,22 @@ To display the states:
 rosrun smach_viewer smach_viewer.py
 ```
 
-## Final Result:
+## Result:
 Following are screenshots of the terminal logs in successive timesteps while running the program:
 
 1. 
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st1.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st2.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st3.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st4.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st5.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st6.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st7.PNG?raw=true)
+
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/st8.PNG?raw=true)
