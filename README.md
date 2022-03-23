@@ -21,7 +21,7 @@ The software architecture of the system is composed of six main components:
 - **Motion Controller**: this is the action server responsible for driving the robot towards a target *(x,y)* position. For now, it is implemented as a simple waiting function for 5 seconds and it always returns True. 
 - **Oracle**: this is the component holding the dictionary of possible hypothesis IDs along with their hints. Each hypothesis ID has 4 hints: one is the empty hint, and the others are *(who, PERSON)*, *(what, WEAPON)*, and *(where, PLACE)*. Whenever the oracle receives a request for the service `/hint` with a specific ID, it returns back a random hint corresponding to this ID in the form `string arg1` and `string arg2` (where `arg1` is 'who', 'what', or 'where', and `arg2` is the name). Once a hint is sent, it is deleted from the dictionary in order not to be sent again. This component also holds the correct hypothesis ID. Whenever it receives a request for the service `/check_hyp` with a specific ID, it returns back whether this is the correct hypothesis ID or not.
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_comp.PNG?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/cluedo_comp.PNG?raw=true)
 
 ## State Diagram:
 
@@ -38,7 +38,7 @@ There are, also, four possible events (state transitions):
 - **false:** indicating that the oracle checked the current hypothesis and found that it is false.
  
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_state_diag.PNG?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/cluedo_state_diag.PNG?raw=true)
 
 ## Sequence Diagram:
 The temporal sequence of the program goes as follows:
@@ -55,7 +55,7 @@ The temporal sequence of the program goes as follows:
 10. if the sent hypothesis ID is not correct, generate a new random integer (not previously selected) from 1 to 10 to be the current hypothesis ID and go to step 1.
 11. if the sent hypothesis ID is correct, end the program.
 
-![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo_seq_diag2.PNG?raw=true)
+![alt text](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/program_images/cluedo_seq_diag2.PNG?raw=true)
 
 ## Installation and Running Procedures:
 
