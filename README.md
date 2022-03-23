@@ -131,6 +131,7 @@ rosrun smach_viewer smach_viewer.py
 - The hint obtained at each room doesn't have to be related to the type of room itself. For example, the agent can receive a hint (where, bathroom) in the kitchen.
 - Whenever a hint is sent to the robot, it is deleted from the dictionary in order not to be sent again. 
   > This is only true for the three types of hints. The empty hint can be sent multiple times.
+- The robot only goes to the oracle when the current hypothesis is `COMPLETE`
 - The new current hypothesis ID is selected randomly from the list of possible hypothesis IDs. 
 - The list of possible hypothesis IDs range from 1 to 10 and they can be modified in the beginning of [state_machine.py](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo/scripts/state_machine.py) The correct hypothesis ID is a number within this range.
 - Whenever an ID is selected, it cannot be selected again.
