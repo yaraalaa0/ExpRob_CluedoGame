@@ -135,7 +135,10 @@ rosrun smach_viewer smach_viewer.py
 - The list of possible hypothesis IDs range from 1 to 10 and they can be modified in the beginning of [state_machine.py](https://github.com/yaraalaa0/ExpRob_CluedoGame/blob/main/cluedo/scripts/state_machine.py) The correct hypothesis ID is a number within this range.
 - Whenever an ID is selected, it cannot be selected again.
 - The environment map of obstacles is stored in the motion controller action server for path planning purposes
-## System Limitations:
--
+
 ## Possible Improvements:
--
+- Allow a hypothesis not to necessarily contain all three types of hints. It can contain only one or two types. It can be inconsistent.
+- Implement a robot model and a game environment to make it more entertaining
+- Implement a real motion controller for the robot instead of the simple waiting function.
+- Implement a computer vision module that can infers the hint by analyzing images of the room coming from the camera sensor.
+- For checking the correctness of the hypothesis, the robot should send the whole hypothesis elements instead of the hypothesis ID. Based on the hypothesis elements (hints), the oracle should decide if it is correct or not. 
